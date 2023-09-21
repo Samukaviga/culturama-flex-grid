@@ -1,0 +1,125 @@
+.menu{
+       
+    display: flex;
+    justify-content: space-evenly; /* espacamento entre os itens de forma igual*/
+    align-items: center; /* centralizacao vertical */
+    flex-wrap: wrap; /*Quando nao tem mais espaço o elemento quebra para proxima linha*/
+    column-gap: 33px; /*espacamento entre os itens em vertical*/   /* ROW-GAP espacamento horizontal */
+
+}
+        
+.categorias__lista {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+}
+
+.destaques {
+    display: flex;
+    align-items: center;
+    column-gap: 1em;
+    justify-content: space-between;
+}
+
+.destaques__barra {
+    flex-grow: 1; /* expande a barra preenchendo o container */
+}
+
+.eventos__lista{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1.6rem;
+    row-gap: 1rem;
+    justify-content: center;
+   
+}
+
+.eventos__item{
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    flex-grow: 1;
+    max-width: 400px;
+
+
+}
+
+.agenda__lista{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    justify-content: center;
+}
+
+.agenda__item{
+    flex-grow: 1;
+    max-width: 530px;
+}
+
+.rodape {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+.rodape__logo {
+    align-self: end; /* alinhamento verticalmente */
+}
+
+@media (min-width: 720px){
+        
+   .menu{
+        column-gap: 75px;
+   }
+    
+   .categorias__lista{
+        flex-wrap: wrap;
+        column-gap: 1.5rem;
+        row-gap: 1rem;
+   }
+
+   .eventos__lista{
+        justify-content: end;
+   }
+
+   .agenda__lista{
+       column-gap: 1.5rem;
+       justify-content: end;
+        
+}
+
+
+}
+
+@media (min-width: 1440px){
+       
+         
+    .menu{
+        column-gap: 105px;
+        flex-wrap: nowrap; /* remove o wrap */
+
+    }
+
+    .menu__item:nth-child(1) { /* Manipulando somente o item 1*/
+        order: 1;
+    }
+
+    .menu__item:nth-child(2){
+        order: 3;
+    }
+
+    .menu__item:nth-child(3){
+        order: 4;
+    }
+
+    .menu__item:nth-child(4){
+        order: 5;
+    }
+
+    .menu__item:nth-child(5){
+        order: 2;
+    }
+
+  
+
+}
